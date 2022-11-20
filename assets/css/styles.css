@@ -46,12 +46,15 @@
 
 /*=============== BASE ===============*/
 * {
+  scroll-behavior: smooth;
+
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
 body {
+  
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   background-color: var(--body-color);
@@ -162,7 +165,8 @@ margin-bottom: 2rem;
   margin-bottom: 1.5rem;
 }
 .f-data span{
-  color: #546eff;
+  color:var(--first-color-alt);
+;
 
 
 }
@@ -175,6 +179,11 @@ margin-bottom: 2rem;
   width: 100%;
   display: grid;
   row-gap: 1rem;
+}
+  .background{
+
+    margin-top: 6rem;
+
 }
 .contact-form input,.contact-form textarea{
   border: none;
@@ -196,7 +205,7 @@ margin-bottom: 2rem;
   cursor: pointer;
 }
 .contact-form .send-btn:hover{
-  background: #546eff;
+  background:white;
   transition: 0.3s;
 }
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -213,6 +222,55 @@ margin-bottom: 2rem;
     margin-right: 1rem;
 
 }
+/* nav */
+
+.nav{
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_menu{
+  z-index: 4;
+
+  position: fixed;
+  bottom: 1rem;
+  background-color:hsla(var(--text-color),32%, 16%, .8);
+
+  width: 90%;
+  border-radius: 4rem;
+  padding: 1rem 2.5rem;
+  backdrop-filter: blur(10px);
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+
+}
+.nav_list{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.nav_link{
+  color: var(--title-color);
+  font-size: 1.25rem;
+  padding: .4rem;
+  display: flex;
+  border-radius: 5rem;
+
+}
+a:active{
+  background:var(--first-color-alt);
+  color: #fff;
+
+}a:hover {
+  color:var(--title-color) ;
+  background-color: var(--first-color-alt);
+
+
+
+}
 
 /*=============== PROFILE ===============*/
 .profile{
@@ -227,6 +285,8 @@ margin-bottom: 2rem;
 .profile__data{
   display: grid;
   text-align: center;
+  margin-top: 6rem;
+
 }
 .profile__perfil{
   width: 100px;
@@ -326,7 +386,7 @@ margin-bottom: 2rem;
 
 }
 .button:hover{
-  background-color: var(--first-color-alt);
+  background-color: white;
 
 }
 .button__small{
@@ -339,7 +399,7 @@ margin-bottom: 2rem;
   color: var(--title-color);
 }
 .button__gray:hover{
-  background-color: var(--text-color-light);
+  background-color: white;
 }
 
 .button-34 {
@@ -363,8 +423,8 @@ margin-bottom: 2rem;
   border: 0;
 }
 .button-34:hover{
-  color: var(--first-color);  
-  background: #546eff;
+  color: white;  
+  background: var(--first-color);;
 
 }
 /*=============== FILTERS TABS ===============*/
@@ -527,7 +587,7 @@ margin-bottom: 2rem;
   width: 64%;
   /* border: 3px solid green; */
   padding: 1rem;
-  margin-top: 2.5rem;
+  margin-top: 6.5rem;
   /* border-bottom: solid;
   border-right: solid; */
 
@@ -685,7 +745,9 @@ margin-bottom: 2rem;
     height: 100%;
   }
 
-
+.main{
+  margin-top: 8rem;
+}
 
   /* timeline taxt */
 
@@ -707,7 +769,7 @@ margin-bottom: 2rem;
 
   
 .year{
-color: #546eff;
+color: var(--first-color);;
 font-size: 12px;
 
 
@@ -777,6 +839,12 @@ font-size: 12px;
   width: 125%;
 
 }
+.nav_menu{
+  width: 328px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
 }
 
 
@@ -799,6 +867,12 @@ font-size: 12px;
   .profile__info{
     column-gap: 1.5rem;
 
+  }
+  .nav_menu{
+    padding: 1rem 1.5rem;
+    margin-left: 2.5rem;
+    align-items: center;
+  
   }
   /* .profile__buttons{
     flex-direction: column;
@@ -840,6 +914,13 @@ font-size: 12px;
     justify-content: center;
 
   }  
+  .nav_menu{
+    width: 328px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-left: ;
+  }
   
   
   
@@ -856,6 +937,12 @@ font-size: 12px;
     justify-content: center;
     column-gap: 3rem;
   }
+  .nav_menu{
+    width: 328px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
   
  
 }
@@ -866,6 +953,12 @@ font-size: 12px;
   .skills__content{
     justify-content: center;
     column-gap: 3rem;
+  }
+  .nav_menu{
+    width: 500px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
   }
 }
 
